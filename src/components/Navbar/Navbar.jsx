@@ -3,7 +3,7 @@ import React from "react";
 import navImg from "../../assets/logo.png";
 import coin from "../../assets/dollar 1.png";
 
-const Navbar = () => {
+const Navbar = ({availableBalance}) => {
   return (
     <div className="navbar flex justify-between items-center content-center mt-15 mx-auto">
       <div class="dropdown block md:hidden">
@@ -35,7 +35,7 @@ const Navbar = () => {
         <a href="" className="btn btn-ghost">Schedules</a>
         </div>
         <div className="flex gap-2 font-bold mx-auto mt-[30px]">
-          <span>0</span>
+          <span>{availableBalance}</span>
           <span>Coin</span>
           <span>
             <img src={coin} alt="" />
@@ -56,7 +56,7 @@ const Navbar = () => {
         <a href="" className="btn btn-ghost">Schedules</a>
         </div>
         <div className="flex gap-2 font-bold">
-          <span>0</span>
+          <span>{availableBalance}</span>
           <span>Coin</span>
           <span>
             <img src={coin} alt="" />

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import profileIcon from "../../assets/Group.png";
 import flagIcon from "../../assets/flag.png";
 
-const PlayerCart = ({player}) => {
+const PlayerCart = ({player, setAvailableBalance,availableBalance}) => {
+  const [isSelected, setSelected] = useState(false)
   return (
     <div>
       <div className="cursor-pointer card bg-base-100 w-96 border-1 p-4 border-gray-200">
@@ -40,9 +41,16 @@ const PlayerCart = ({player}) => {
             <h4 className="font-semibold text-[14px] pl-4 text-[#131313] ">
               Price: ${player.price_usd}
             </h4>
-            <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313]">
+            <button disabled={isSelected} onClick={() => {
+              setSelected(true),
+              setAvailableBalance(availableBalance - player.price_usd )
+            }} className="font-regular text-[14px] btn btn-ghost text-[#131313]">
+              {isSelected === false? <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313] border-0">
               Choose Player
-            </h4>
+            </h4>: <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313] border-0">
+              Player Selected
+            </h4>}
+            </button>
           </div>
         </div>
       </div>

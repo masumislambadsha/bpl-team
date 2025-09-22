@@ -1,9 +1,7 @@
 import React, { use } from "react";
-import profileIcon from "../../assets/Group.png";
-import flagIcon from "../../assets/flag.png";
 import PlayerCart from "../PlayerCard/PlayerCart";
 
-const AvailablePLayers = ({ playersPromise }) => {
+const AvailablePLayers = ({ playersPromise, setAvailableBalance, availableBalance }) => {
   const playersData = use(playersPromise);
   console.log(playersData);
 
@@ -11,7 +9,7 @@ const AvailablePLayers = ({ playersPromise }) => {
     <div className="mt-[100px] flex flex-wrap md:gap-24 space-y-5 justify-center items-center">
 
     {
-      playersData.map(player =><PlayerCart player={player}></PlayerCart> )
+      playersData.map(player =><PlayerCart availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} player={player}></PlayerCart> )
     }
 
       {/* <div className="card bg-base-100 w-96 border-1 p-4 border-gray-200">
