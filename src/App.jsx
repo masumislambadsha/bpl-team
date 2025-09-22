@@ -7,26 +7,26 @@ import { Suspense } from "react";
 import Footer from "./components/Footer/Footer";
 import Subscribe from "./components/Subscribe/Subscribe";
 
-// const fetchPlayers = async () => {
-//   const res = await fetch("/Players.json");
-//   return res.json();
-// };
+const fetchPlayers = async () => {
+  const res = await fetch("/Players.json");
+  return res.json();
+};
 function App() {
-  // const playersPromise = fetchPlayers();
+  const playersPromise = fetchPlayers();
   return (
     <>
-      <div className="max-w-[1280px] mx-auto">
+      <div className="max-w-[1600px] mx-auto">
          <Navbar></Navbar>
-        {/*<HeroSection></HeroSection>
+        <HeroSection></HeroSection>
         <Suspense
           fallback={
             <span className="loading loading-spinner loading-xl mx-auto ml-[650px]"></span>
           }
         >
           <AvailablePLayers playersPromise={playersPromise}></AvailablePLayers>
-        </Suspense> */}
+        </Suspense> 
 
-        {/* <SelectedPlayers></SelectedPlayers> */}
+         <SelectedPlayers></SelectedPlayers> 
           <Subscribe></Subscribe>
         <Footer></Footer>
       </div>
