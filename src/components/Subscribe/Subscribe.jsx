@@ -7,7 +7,7 @@ const Subscribe = () => {
     <div className="bg-[#060919] h-53 mt-[300px] text-center mb-[-3px] flex flex-col justify-center items-center relative ">
       <div
         style={{ backgroundImage: `url(${bgImg})`, }}
-        className=" bg-white h-[336px] w-9/12 flex flex-col justify-center items-center space-y-5 absolute top-[-150px] rounded-3xl"
+        className=" bg-white h-[336px] md:w-9/12 flex flex-col justify-center items-center space-y-5 absolute top-[-150px] rounded-3xl"
       >
         <h3 className="font-semibold text-[32px] text-[#131313]">
           Subscribe to our Newsletter
@@ -15,7 +15,7 @@ const Subscribe = () => {
         <p className="text-[20px] font-medium text-[#13131370] ">
           Get the latest updates and news right in your inbox!
         </p>
-        <div className="flex gap-3  w-11/12 items-center justify-center">
+        <div className="flex gap-3  md:w-11/12 items-center justify-center">
           <input
             type="text"
             className="h-[56px] w-6/12 p-[16px] border-1 border-gray-400 rounded-2xl"

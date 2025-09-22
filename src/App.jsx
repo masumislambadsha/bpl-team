@@ -15,7 +15,7 @@ function App() {
   const playersPromise = fetchPlayers();
   return (
     <>
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[1500px] mx-auto">
          <Navbar></Navbar>
         <HeroSection></HeroSection>
         <Suspense
@@ -24,9 +24,9 @@ function App() {
           }
         >
           <AvailablePLayers playersPromise={playersPromise}></AvailablePLayers>
-        </Suspense> 
+        </Suspense>
 
-         <SelectedPlayers></SelectedPlayers> 
+         <SelectedPlayers></SelectedPlayers>
           <Subscribe></Subscribe>
         <Footer></Footer>
       </div>

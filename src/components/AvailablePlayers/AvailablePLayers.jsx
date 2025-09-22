@@ -7,7 +7,7 @@ const AvailablePLayers = ({ playersPromise }) => {
   console.log(playersData);
 
   return (
-    <div className="mt-[100px] flex flex-wrap gap-3 space-y-5 justify-center items-center">
+    <div className="mt-[100px] flex flex-wrap md:gap-24 space-y-5 justify-center items-center">
 
     {
       playersData.map(player => <div className="cursor-pointer card bg-base-100 w-96 border-1 p-4 border-gray-200">
