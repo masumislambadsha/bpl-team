@@ -1,0 +1,122 @@
+[
+  {
+    "player_image": "https://i.ibb.co.com/RkDn47R1/tamim.png",
+    "player_name": "Tamim Iqbal",
+    "player_country": "Bangladesh",
+    "playing_role": "Batsman (Captain)",
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm offbreak (rare)",
+    "rating": 90,
+    "price_usd": 100000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/Kcvv1q73/Khushdil.png",
+    "player_name": "Khushdil Shah",
+    "player_country": "Pakistan",
+    "playing_role": "All-rounder",
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Slow left-arm orthodox",
+    "rating": 99,
+    "price_usd": 120000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/1GkDmm8S/taskin.png",
+    "player_name": "Taskin Ahmed",
+    "player_country": "Bangladesh",
+    "playing_role": "Bowler (Fast)",
+    "batting_style": "Left-hand bat (lower order)",
+    "bowling_style": "Right-arm fast",
+    "rating": 98,
+    "price_usd": 115000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/YFytFYzs/shamim.png",
+    "player_name": "Shamim Hossain",
+    "player_country": "Bangladesh",
+    "playing_role": "All-rounder",
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "rating": 86,
+    "price_usd": 65000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/0VGN5K2p/naim.png",
+    "player_name": "Mohammad Naim",
+    "player_country": "Bangladesh",
+    "playing_role": "Batsman",
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm offbreak (part-time)",
+    "rating": 98,
+    "price_usd": 85000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/WWsXrN38/tanzid.jpg",
+    "player_name": "Tanzid Hasan",
+    "player_country": "Bangladesh",
+    "playing_role": "Batsman",
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm offbreak (occasional)",
+    "rating": 96,
+    "price_usd": 80000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/20LHFBYb/Graham-Clark.jpg",
+    "player_name": "Graham Clark",
+    "player_country": "England",
+    "playing_role": "Batsman",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm legbreak (occasional)",
+    "rating": 92,
+    "price_usd": 95000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/B2D92Yhd/anamul.jpg",
+    "player_name": "Anamul Haque",
+    "player_country": "Bangladesh",
+    "playing_role": "Batsman",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "rating": 89,
+    "price_usd": 70000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/4w5Z5848/liton.jpg",
+    "player_name": "Litton Das",
+    "player_country": "Bangladesh",
+    "playing_role": "Wicket-keeper Batsman",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "N/A",
+    "rating": 87,
+    "price_usd": 110000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/q3bFgnj6/Khaled.jpg",
+    "player_name": "Khaled Ahmed",
+    "player_country": "Bangladesh",
+    "playing_role": "Bowler",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm medium-fast",
+    "rating": 85,
+    "price_usd": 60000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/XZxB5yHp/slam.png",
+    "player_name": "Al Islam",
+    "player_country": "Bangladesh",
+    "playing_role": "Bowler (Spinner)",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "rating": 84,
+    "price_usd": 55000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/gbkxxHxm/miraz.png",
+    "player_name": "Mehidy Hasan Miraz",
+    "player_country": "Bangladesh",
+    "playing_role": "All-rounder",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "rating": 95,
+    "price_usd": 105000
+  }
+]
