@@ -1,8 +1,9 @@
 import "./App.css";
+  import { ToastContainer } from 'react-toastify';
 import Navbar from "./components/Navbar/Navbar";
 import HeroSection from "./components/Hero-Section/Hero-Section";
 import AvailablePLayers from "./components/AvailablePlayers/AvailablePLayers";
-import SelectedPlayers from "./components/selectedPlayers/SelectedPlayers";
+import SelectedPlayers from "./components/SelectedPlayers/SelectedPlayers";
 import { Suspense, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Subscribe from "./components/Subscribe/Subscribe";
@@ -25,6 +26,13 @@ function App() {
   // }
   // console.log(selectedPlayers)
 
+  const removePlayer = (playerName, playerPrice) =>{
+    const newArr = selectedPlayers.filter(delCard =>
+   playerName !== delCard.player_name )
+   setSelectedPlayers(newArr)
+   setAvailableBalance(availableBalance + playerPrice)
+  }
+
   return (
     <>
       <div className="max-w-[1500px] mx-auto">
@@ -32,7 +40,7 @@ function App() {
         <HeroSection></HeroSection>
         <div className="flex justify-between px-[30px] py-[15px]">
           <h1 className="font-bold text-2xl">{toggle===true?"Available Players":`Selected Players ${selectedPlayers.length}/6`}</h1>
-          <div className="">
+          <div className="flex md:block flex-col md:flex-row items-center justify-center ">
             <button onClick={()=>setToggle(true)} className={`btn ${toggle===true?"bg-[#E7FE29]":''} px-[30px] py-[20px] rounded-l-2xl border-1 border-gray-200 border-r-0`}>Available</button>
             <button onClick={()=>setToggle(false)} className={`btn ${toggle===false?"bg-[#E7FE29]":''} px-[30px] py-[20px] rounded-r-2xl border-1 border-gray-200 border-r-0`}>
               Selected <span>({selectedPlayers.length})</span>
@@ -45,15 +53,18 @@ function App() {
             <span className="loading loading-spinner loading-xl mx-auto ml-[650px]"></span>
           }
         >
-          <AvailablePLayers selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} availableBalance={availableBalance} playersPromise={playersPromise} setAvailableBalance={setAvailableBalance}></AvailablePLayers>
+          <AvailablePLayers
+           selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} availableBalance={availableBalance} playersPromise={playersPromise} setAvailableBalance={setAvailableBalance}>
+          </AvailablePLayers>
         </Suspense>:<Suspense fallback={<span className="loading loading-spinner loading-xl mx-auto ml-[650px]"></span>}><SelectedPlayers
-        selectedPlayers={selectedPlayers}></SelectedPlayers></Suspense>
+        selectedPlayers={selectedPlayers} removePlayer={removePlayer}></SelectedPlayers></Suspense>
         }
 
 
 
         <Subscribe></Subscribe>
         <Footer></Footer>
+        <ToastContainer/>
       </div>
     </>
   );

@@ -4,10 +4,12 @@ import subs from "../../assets/Frame 11 (1).png";
 
 const Subscribe = () => {
   return (
-    <div className="bg-[#060919] h-53 mt-[300px] text-center mb-[-3px] flex flex-col justify-center items-center relative ">
-      <div
+
+      <div className="bg-[#060919] h-53 mt-[300px] text-center mb-[-3px] flex flex-col justify-center items-center relative ">
+      <div className="absolute top-[-150px] md:w-9/12 bg-[#ffffff40]  p-4 border-2 border-white rounded-3xl">
+        <div
         style={{ backgroundImage: `url(${bgImg})`, }}
-        className=" bg-white h-[336px] md:w-9/12 flex flex-col justify-center items-center space-y-5 absolute top-[-150px] rounded-3xl"
+        className=" bg-cover bg-white h-[336px] flex flex-col justify-center items-center space-y-5  rounded-3xl"
       >
         <h3 className="font-semibold text-[32px] text-[#131313]">
           Subscribe to our Newsletter
@@ -26,6 +28,8 @@ const Subscribe = () => {
           </button>
         </div>
       </div>
+      </div>
+
     </div>
   );
 };

@@ -5,7 +5,7 @@ import subscribe from '../../assets/Frame 11.png'
 const Footer = () => {
   return (
     <div className='mt-[-2px] bg-[#060919] flex flex-col items-center justify-center md:text-start text-center'>
-      <img src={FooterImg} alt="" />
+      <img className='mt-10' src={FooterImg} alt="" />
       <div className='flex flex-col md:flex-row gap-10 md:gap-[200px] items-center my-[100px]  '>
         <div className='space-y-5'>
           <h3 className='font-semibold text-[20px] text-white'>About Us</h3>

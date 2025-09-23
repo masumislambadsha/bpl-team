@@ -10,7 +10,9 @@ const AvailablePLayers = ({ playersPromise, setAvailableBalance, availableBalanc
     <div className="mt-[100px] flex flex-wrap md:gap-24 space-y-5 justify-center items-center">
 
     {
-      playersData.map(player =><PlayerCart availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}
+      playersData.map(player =><PlayerCart
+        key={player.player_name}
+        availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}
       player={player}></PlayerCart> )
     }
 

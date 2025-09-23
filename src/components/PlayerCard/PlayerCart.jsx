@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import profileIcon from "../../assets/Group.png";
 import flagIcon from "../../assets/flag.png";
+// import { toast } from "react-toastify";
 
 const PlayerCart = ({ player, setAvailableBalance, availableBalance, setSelectedPlayers, selectedPlayers }) => {
   const [isSelected, setSelected] = useState(false);
@@ -10,6 +11,10 @@ const PlayerCart = ({ player, setAvailableBalance, availableBalance, setSelected
       alert('dont have enough money')
       return
     }
+      if(selectedPlayers.length >= 6){
+    alert('you have taken maxmimum players ')
+    return
+  }
 
     const newArr = [...selectedPlayers, player]
     setSelectedPlayers(newArr)

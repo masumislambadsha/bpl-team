@@ -6,39 +6,40 @@ import coin from "../../assets/dollar 1.png";
 const Navbar = ({ availableBalance }) => {
   return (
     <div className="navbar flex justify-between items-center content-center md:mt-15 mx-auto">
-      <div class="dropdown block md:hidden">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+      {/* Mobile dropdown */}
+      <div className="dropdown block md:hidden">
+        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
+            className="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            {" "}
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M4 6h16M4 12h16M4 18h7"
-            />{" "}
+            />
           </svg>
         </div>
         <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          tabIndex={0}
+          className="menu menu-sm dropdown-content rounded-box z-10 mt-3 w-52 p-2 shadow
+                     bg-white/30 backdrop-blur-sm"
         >
-          <div className="flex flex-col gap-10 opacity-70">
-            <a href="" className="btn btn-ghost">
+          <div className="flex text-start flex-col gap-1 md:gap-10 opacity-70">
+            <a href="#" className="btn btn-ghost">
               Home
             </a>
-            <a href="" className="btn btn-ghost">
+            <a href="#" className="btn btn-ghost">
               Fixture
             </a>
-            <a href="" className="btn btn-ghost">
+            <a href="#" className="btn btn-ghost">
               Teams
             </a>
-            <a href="" className="btn btn-ghost">
+            <a href="#" className="btn btn-ghost">
               Schedules
             </a>
           </div>
@@ -46,28 +47,32 @@ const Navbar = ({ availableBalance }) => {
             <span>{availableBalance}</span>
             <span>Coin</span>
             <span>
-              <img src={coin} alt="" />
+              <img src={coin} alt="coin" />
             </span>
           </div>
         </ul>
       </div>
-      <div className="">
+
+      {/* Logo */}
+      <div>
         <a className="text-xl">
-          <img className="w-[60px] h-[60px]" src={navImg} alt="" />
+          <img className="w-[60px] h-[60px]" src={navImg} alt="logo" />
         </a>
       </div>
-      <div className="md:flex gap-10 items-center hidden">
-        <div className="flex gap-10 opacity-70">
-          <a href="" className="btn btn-ghost">
+
+      {/* Desktop nav */}
+      <div className="md:flex gap-3 md:gap-10 items-center hidden">
+        <div className="flex gap-3 md:gap-10 opacity-70">
+          <a href="#" className="btn btn-ghost">
             Home
           </a>
-          <a href="" className="btn btn-ghost">
+          <a href="#" className="btn btn-ghost">
             Fixture
           </a>
-          <a href="" className="btn btn-ghost">
+          <a href="#" className="btn btn-ghost">
             Teams
           </a>
-          <a href="" className="btn btn-ghost">
+          <a href="#" className="btn btn-ghost">
             Schedules
           </a>
         </div>
@@ -75,7 +80,7 @@ const Navbar = ({ availableBalance }) => {
           <span>{availableBalance}</span>
           <span>Coin</span>
           <span>
-            <img src={coin} alt="" />
+            <img src={coin} alt="coin" />
           </span>
         </div>
       </div>
