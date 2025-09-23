@@ -24,7 +24,7 @@ const PlayerCart = ({ player, setAvailableBalance, availableBalance, setSelected
 
   return (
     <div>
-      <div className="cursor-pointer card bg-base-100 md:w-96 w-[320px] border-1 p-4 border-gray-200">
+      <div className="cursor-pointer card bg-base-100 md:w-96 w-[320px] border-1 p-4 border-gray-200 transition duration-500 hover:bg-[#b8b8b875]  hover:scale-110 rounded-4xl">
         <figure>
           <img
             className="rounded-2xl w-[350px] h-[350px] object-cover"

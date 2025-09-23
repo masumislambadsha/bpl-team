@@ -41,8 +41,8 @@ function App() {
         <div className="flex justify-between px-[30px] py-[15px]">
           <h1 className="font-bold text-2xl">{toggle===true?"Available Players":`Selected Players ${selectedPlayers.length}/6`}</h1>
           <div className="flex md:block flex-col md:flex-row items-center justify-center ">
-            <button onClick={()=>setToggle(true)} className={`btn ${toggle===true?"bg-[#E7FE29]":''} px-[30px] py-[20px] rounded-l-2xl border-1 border-gray-200 border-r-0`}>Available</button>
-            <button onClick={()=>setToggle(false)} className={`btn ${toggle===false?"bg-[#E7FE29]":''} px-[30px] py-[20px] rounded-r-2xl border-1 border-gray-200 border-r-0`}>
+            <button onClick={()=>setToggle(true)} className={`btn ${toggle===true?"bg-[#E7FE29]":''} px-[30px] py-[20px] rounded-l-2xl border-1 border-gray-200 border-r-0 transition duration-500 hover:scale-115`}>Available</button>
+            <button onClick={()=>setToggle(false)} className={`btn ${toggle===false?"bg-[#E7FE29]":''} px-[30px] py-[20px] rounded-r-2xl border-1 border-gray-200 border-r-0 transition duration-500 hover:scale-115`}>
               Selected <span>({selectedPlayers.length})</span>
             </button>
           </div>
