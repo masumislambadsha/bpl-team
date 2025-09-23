@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import profileIcon from "../../assets/Group.png";
 import flagIcon from "../../assets/flag.png";
 
-const PlayerCart = ({player, setAvailableBalance,availableBalance}) => {
-  const [isSelected, setSelected] = useState(false)
+const PlayerCart = ({ player, setAvailableBalance, availableBalance, setSelectedPlayers, selectedPlayers }) => {
+  const [isSelected, setSelected] = useState(false);
+
+  const handleSelect = (player) => {
+    if(availableBalance < player.price_usd ){
+      alert('dont have enough money')
+      return
+    }
+
+    const newArr = [...selectedPlayers, player]
+    setSelectedPlayers(newArr)
+    setSelected(true),
+    setAvailableBalance(availableBalance - player.price_usd);
+  };
+
   return (
     <div>
       <div className="cursor-pointer card bg-base-100 w-96 border-1 p-4 border-gray-200">
@@ -35,21 +48,28 @@ const PlayerCart = ({player, setAvailableBalance,availableBalance}) => {
           </div>
           <div className="flex justify-between">
             <p className="font-bold text-[16px] pl-4">Rating</p>
-            <p className="font-bold text-[16px] text-end pr-4">{player.rating}</p>
+            <p className="font-bold text-[16px] text-end pr-4">
+              {player.rating}
+            </p>
           </div>
           <div className="flex justify-between items-center">
             <h4 className="font-semibold text-[14px] pl-4 text-[#131313] ">
               Price: ${player.price_usd}
             </h4>
-            <button disabled={isSelected} onClick={() => {
-              setSelected(true),
-              setAvailableBalance(availableBalance - player.price_usd )
-            }} className="font-regular text-[14px] btn btn-ghost text-[#131313]">
-              {isSelected === false? <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313] border-0">
-              Choose Player
-            </h4>: <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313] border-0">
-              Player Selected
-            </h4>}
+            <button
+              disabled={isSelected}
+              onClick={() => {handleSelect(player)}}
+              className="font-regular text-[14px] btn btn-ghost text-[#131313]"
+            >
+              {isSelected === false ? (
+                <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313] border-0">
+                  Choose Player
+                </h4>
+              ) : (
+                <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313] border-0">
+                  Player Selected
+                </h4>
+              )}
             </button>
           </div>
         </div>
