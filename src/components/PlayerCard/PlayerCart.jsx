@@ -24,7 +24,7 @@ const PlayerCart = ({ player, setAvailableBalance, availableBalance, setSelected
 
   return (
     <div>
-      <div className="cursor-pointer card bg-base-100 w-[320px] border-1 p-4 border-gray-200">
+      <div className="cursor-pointer card bg-base-100 md:w-96 w-[320px] border-1 p-4 border-gray-200">
         <figure>
           <img
             className="rounded-2xl w-[350px] h-[350px] object-cover"
@@ -64,14 +64,14 @@ const PlayerCart = ({ player, setAvailableBalance, availableBalance, setSelected
             <button
               disabled={isSelected}
               onClick={() => {handleSelect(player)}}
-              className="font-regular text-[14px] btn btn-ghost text-[#131313]"
+              className=" hover:border-none font-regular text-[14px] btn btn-ghost text-[#131313] p-0 border-0"
             >
               {isSelected === false ? (
-                <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313] border-0">
+                <h4 className="font-regular text-[14px] btn btn-ghost hover:bg-cyan-500 shadow-2xl border-gray-300 text-[#131313] rounded-lg">
                   Choose Player
                 </h4>
               ) : (
-                <h4 className="font-regular text-[14px] btn btn-ghost text-[#131313] border-0">
+                <h4 className="font-regular text-[14px] btn btn-ghost shadow-2xl border-gray-300 text-[#131313] rounded-lg">
                   Player Selected
                 </h4>
               )}
